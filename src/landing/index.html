@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title data-i18n="title">Balambit</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00D9FF", // Official Electric Cyan
+                        secondary: "#2D3748", // Official Charcoal Gray
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0A0C10", // Deeper dark mode for more "premium" feel
+                        "surface-dark": "#1A202C",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'glow': '0 0 20px rgba(0, 217, 255, 0.3)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #1A202C;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E0;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4A5568;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00D9FF;
+        }
+
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(0, 217, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 217, 255, 0.04) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .premium-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Ultra-Spacing Helpers */
+        .section-spacing {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+        @media (min-width: 1024px) {
+            .section-spacing {
+                padding-top: 12rem;
+                padding-bottom: 12rem;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-body antialiased transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 premium-blur border-b border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="block hover:opacity-90 transition-opacity">
+                        <img src="./assets/branding/Balambit_Logo_Horizontal_Web_Transparent.png" alt="Balambit Logo"
+                            class="h-16 py-2 dark:invert object-contain">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
+                        href="#results" data-i18n="nav_results">Resultados</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
+                        href="#engineering" data-i18n="nav_engineering">Ingeniería</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
+                        href="#solutions" data-i18n="nav_solutions">Soluciones</a>
+                    <a class="bg-secondary dark:bg-primary text-white dark:text-secondary px-7 py-3 rounded-full text-sm font-bold hover:shadow-glow transition transform hover:-translate-y-0.5"
+                        href="#diagnosis" data-i18n="nav_contact">Contactar</a>
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center gap-3 border-l border-slate-200 dark:border-slate-800 pl-6 ml-2">
+                        <button data-switch-lang="es"
+                            class="group relative flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border border-transparent hover:border-primary/50 transition-all shadow-sm"
+                            title="Español (México)">
+                            <svg class="w-full h-full object-cover" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h170.7v512H0z" fill="#006847" />
+                                <path d="M170.7 0h170.6v512H170.7z" fill="#fff" />
+                                <path d="M341.3 0H512v512H341.3z" fill="#ce1126" />
+                                <circle cx="256" cy="256" r="30" fill="#4d2800" opacity="0.8" />
+                                <!-- Abstraction of the coat of arms -->
+                            </svg>
+                        </button>
+                        <button data-switch-lang="en"
+                            class="group relative flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border border-transparent hover:border-primary/50 transition-all shadow-sm"
+                            title="English (US)">
+                            <svg class="w-full h-full object-cover" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h512v512H0z" fill="#fff" />
+                                <path
+                                    d="M0 0h512v39.4H0zm0 78.8h512v39.4H0zm0 78.7h512v39.4H0zm0 78.8h512v39.4H0zm0 78.8h512v39.4H0zm0 78.8h512v39.4H0z"
+                                    fill="#b22234" />
+                                <path d="M0 0h204.8v275.8H0z" fill="#3c3b6e" />
+                                <!-- Simplified stars abstraction -->
+                                <circle cx="40" cy="40" r="4" fill="#fff" />
+                                <circle cx="80" cy="40" r="4" fill="#fff" />
+                                <circle cx="120" cy="40" r="4" fill="#fff" />
+                                <circle cx="160" cy="40" r="4" fill="#fff" />
+                                <circle cx="60" cy="80" r="4" fill="#fff" />
+                                <circle cx="100" cy="80" r="4" fill="#fff" />
+                                <circle cx="140" cy="80" r="4" fill="#fff" />
+                                <circle cx="40" cy="120" r="4" fill="#fff" />
+                                <circle cx="80" cy="120" r="4" fill="#fff" />
+                                <circle cx="120" cy="120" r="4" fill="#fff" />
+                                <circle cx="160" cy="120" r="4" fill="#fff" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-32 lg:pt-56 lg:pb-48 overflow-hidden bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-20 items-center">
+                <div class="lg:col-span-6 text-center lg:text-left mb-16 lg:mb-0">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20"
+                        data-i18n="hero_tag">
+                        Ingeniería de Alto Nivel
+                    </div>
+                    <h1 class="font-display text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]"
+                        data-i18n="hero_title">
+                        Tu mejor vendedor <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">no
+                            duerme.</span>
+                    </h1>
+                    <p class="font-body text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                        data-i18n="hero_desc">
+                        Despliega una fuerza laboral digital escalable. Automatización de procesos comerciales impulsada
+                        por redes neuronales y arquitectura resiliente.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                        <a class="inline-flex items-center justify-center px-10 py-5 border border-transparent text-base font-bold rounded-full text-white bg-primary hover:bg-cyan-400 shadow-glow transition-all duration-300"
+                            href="#diagnosis">
+                            <span data-i18n="hero_cta">Comenzar Diagnóstico</span>
+                            <span class="material-icons ml-2 text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Visual Element -->
+                <div class="lg:col-span-6 relative">
+                    <div
+                        class="relative rounded-2xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-2xl p-10 premium-blur bg-opacity-90 dark:bg-opacity-80">
+                        <div class="absolute -top-16 -right-16 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+                        <div class="flex flex-col space-y-8">
+                            <div
+                                class="flex justify-between items-center border-b border-slate-100 dark:border-slate-700 pb-5">
+                                <div class="flex gap-2.5">
+                                    <div class="w-3.5 h-3.5 rounded-full bg-red-400"></div>
+                                    <div class="w-3.5 h-3.5 rounded-full bg-yellow-400"></div>
+                                    <div class="w-3.5 h-3.5 rounded-full bg-green-400"></div>
+                                </div>
+                                <div class="text-xs text-slate-400 font-mono tracking-tighter" data-i18n="status_label">
+                                    system_status: opt_active
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div
+                                    class="p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-700">
+                                    <div class="flex items-end space-x-3 h-32 mb-3">
+                                        <div class="w-1/4 bg-slate-200 dark:bg-slate-700 h-1/2 rounded-t-sm"></div>
+                                        <div class="w-1/4 bg-slate-300 dark:bg-slate-600 h-2/3 rounded-t-sm"></div>
+                                        <div class="w-1/4 bg-primary/40 h-3/4 rounded-t-sm"></div>
+                                        <div class="w-1/4 bg-primary h-full rounded-t-sm shadow-glow"></div>
+                                    </div>
+                                    <div
+                                        class="h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                        <div class="bg-primary h-full w-3/4"></div>
+                                    </div>
+                                </div>
+                                <div class="relative flex items-center justify-center p-6">
+                                    <svg class="w-full h-full text-slate-200 dark:text-slate-700" viewBox="0 0 100 100">
+                                        <circle class="text-primary/10 fill-current" cx="50" cy="50" r="20"></circle>
+                                        <circle class="text-primary fill-current shadow-glow" cx="50" cy="50" r="10">
+                                        </circle>
+                                        <circle cx="20" cy="20" fill="currentColor" r="6"></circle>
+                                        <circle cx="80" cy="80" fill="currentColor" r="6"></circle>
+                                        <circle cx="80" cy="20" fill="currentColor" r="6"></circle>
+                                        <circle cx="20" cy="80" fill="currentColor" r="6"></circle>
+                                        <path d="M25 25 L45 45 M55 55 L75 75 M75 25 L55 45 M45 55 L25 75"
+                                            stroke="currentColor" stroke-width="2.5"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-5 bg-primary/5 dark:bg-primary/10 p-5 rounded-xl border border-primary/20">
+                                <span class="material-icons text-primary text-3xl">auto_graph</span>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="opt_title">
+                                        Optimización en Tiempo
+                                        Real</div>
+                                    <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="opt_desc">
+                                        Algoritmos predictivos
+                                        ajustando el flujo de conversión.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section-spacing bg-secondary text-white relative" id="results">
+        <div
+            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-24">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-8" data-i18n="prob_title">El cuello de botella
+                    es humano.</h2>
+                <p class="text-xl text-slate-300 leading-relaxed font-light" data-i18n="prob_desc">
+                    Tus leads se enfrían en minutos. La 'Golden Window' de respuesta es de <span
+                        class="text-primary font-bold">5 minutos</span>.
+                    Si tu equipo tarda horas, estás perdiendo el 80% de tus oportunidades frente a competidores
+                    automatizados.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div
+                    class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mb-8 group-hover:bg-red-500/20 transition">
+                        <span class="material-icons text-red-400 text-3xl">timer_off</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="card_td_title">Respuesta Tardía</h3>
+                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="card_td_desc">El 78% de las ventas
+                        van al proveedor que
+                        responde primero. La velocidad no es un lujo, es supervivencia.</p>
+                </div>
+                <div
+                    class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-orange-500/10 flex items-center justify-center mb-8 group-hover:bg-orange-500/20 transition">
+                        <span class="material-icons text-orange-400 text-3xl">leak_add</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="card_fl_title">Fugas en el Funnel</h3>
+                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="card_fl_desc">Leads cualificados
+                        abandonados por falta de
+                        seguimiento o procesos manuales propensos a errores.</p>
+                </div>
+                <div
+                    class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition">
+                        <span class="material-icons text-primary text-3xl">trending_up</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="card_ls_title">Escalabilidad Limitada</h3>
+                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="card_ls_desc">Contratar más
+                        vendedores es lineal. Automatizar
+                        con Balambit es exponencial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering DNA Section -->
+    <section
+        class="section-spacing bg-background-light dark:bg-background-dark border-b border-slate-100 dark:border-slate-900"
+        id="engineering">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div>
+                    <h2 class="font-display text-4xl font-bold text-slate-900 dark:text-white mb-8"
+                        data-i18n="eng_title">
+                        ADN de Alta Ingeniería
+                    </h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed" data-i18n="eng_desc">
+                        No somos una agencia de marketing. Somos ingenieros de sistemas construyendo la infraestructura
+                        comercial del futuro. Nuestra arquitectura soporta cargas masivas sin perder precisión.
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="material-icons text-primary mt-1 mr-4 text-2xl">check_circle</span>
+                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li1">Infraestructura
+                                Serverless de
+                                auto-escalado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-primary mt-1 mr-4 text-2xl">check_circle</span>
+                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li2">Integración
+                                nativa con CRMs
+                                Enterprise</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-primary mt-1 mr-4 text-2xl">check_circle</span>
+                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li3">Seguridad de
+                                datos de grado
+                                bancario</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div
+                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                        <div class="text-5xl font-display font-bold text-primary mb-3">+17k</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
+                            data-i18n="stat_trans">
+                            Transacciones / seg</div>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                        <div class="text-5xl font-display font-bold text-slate-900 dark:text-white mb-3">99.9%</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
+                            data-i18n="stat_uptime">
+                            Uptime Garantizado</div>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                        <div class="text-5xl font-display font-bold text-slate-900 dark:text-white mb-3">24/7</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
+                            data-i18n="stat_ops">
+                            Operación Continua</div>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                        <div class="text-5xl font-display font-bold text-primary mb-3">3x</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
+                            data-i18n="stat_roi">ROI
+                            Promedio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section-spacing bg-slate-50 dark:bg-[#0D1117]" id="solutions">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-24">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6"
+                    data-i18n="sol_title">Ecosistema
+                    de Automatización</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-light" data-i18n="sol_desc">
+                    Soluciones modulares
+                    diseñadas para trabajar en sincronía perfecta.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div
+                    class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <span class="material-icons text-9xl text-primary">smart_toy</span>
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-icons text-blue-600 dark:text-blue-400 text-3xl">support_agent</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="mod_ai_title">
+                        Asistentes de Venta AI</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8"
+                        data-i18n="mod_ai_desc">Chatbots cognitivos que
+                        califican leads, agendan citas y responden dudas técnicas sin intervención humana.</p>
+                    <a class="text-primary font-bold text-sm hover:underline flex items-center decoration-2 underline-offset-4"
+                        href="#">
+                        <span data-i18n="mod_ai_link">Explorar módulo</span> <span
+                            class="material-icons text-sm ml-2">arrow_forward</span>
+                    </a>
+                </div>
+                <div
+                    class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <span class="material-icons text-9xl text-primary">radar</span>
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-icons text-primary text-3xl">person_search</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="mod_ip_title">
+                        Prospección Inteligente</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8"
+                        data-i18n="mod_ip_desc">Algoritmos de scraping
+                        ético y enriquecimiento de datos para encontrar a tu cliente ideal en el momento exacto.</p>
+                    <a class="text-primary font-bold text-sm hover:underline flex items-center decoration-2 underline-offset-4"
+                        href="#">
+                        <span data-i18n="mod_ip_link">Explorar módulo</span> <span
+                            class="material-icons text-sm ml-2">arrow_forward</span>
+                    </a>
+                </div>
+                <div
+                    class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <span class="material-icons text-9xl text-primary">hub</span>
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-icons text-indigo-600 dark:text-indigo-400 text-3xl">account_tree</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="mod_po_title">
+                        Orquestación de Procesos</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8"
+                        data-i18n="mod_po_desc">Conectamos tus silos de
+                        información. Tu CRM habla con tu email, tu web y tu facturación automáticamente.</p>
+                    <a class="text-primary font-bold text-sm hover:underline flex items-center decoration-2 underline-offset-4"
+                        href="#">
+                        <span data-i18n="mod_po_link">Explorar módulo</span> <span
+                            class="material-icons text-sm ml-2">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnosis Section -->
+    <section class="section-spacing relative overflow-hidden" id="diagnosis">
+        <div class="absolute inset-0 bg-secondary dark:bg-[#050608]"></div>
+        <div class="absolute inset-0 overflow-hidden">
+            <svg class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-10"
+                preserveAspectRatio="none" viewBox="0 0 100 100">
+                <path d="M0 0 C 30 50 70 50 100 100" fill="none" stroke="#00D9FF" stroke-width="0.3"></path>
+                <path d="M100 0 C 70 50 30 50 0 100" fill="none" stroke="#00D9FF" stroke-width="0.3"></path>
+            </svg>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 relative z-10 text-center">
+            <h2 class="font-display text-5xl lg:text-6xl font-bold text-white mb-8" data-i18n="diag_title">¿Tu empresa
+                es escalable?</h2>
+            <p class="text-2xl text-slate-300 mb-12 font-light" data-i18n="diag_desc">Descubre cuánto dinero estás
+                dejando sobre la mesa por
+                ineficiencias operativas.</p>
+            <div
+                class="bg-white/5 backdrop-blur-xl border border-white/10 p-2.5 rounded-full max-w-2xl mx-auto flex flex-col sm:flex-row gap-3">
+                <input
+                    class="flex-grow bg-transparent border-none text-white placeholder-slate-500 focus:ring-0 px-8 py-4 rounded-full text-lg w-full"
+                    placeholder="tu@empresa.com" type="email" data-i18n="diag_input" />
+                <button
+                    class="bg-primary hover:bg-cyan-400 text-secondary font-black py-4 px-10 rounded-full whitespace-nowrap transition-all shadow-glow"
+                    data-i18n="diag_cta">
+                    ¡Quiero mi diagnóstico gratuito!
+                </button>
+            </div>
+            <p class="mt-8 text-sm text-slate-500 tracking-tight" data-i18n="diag_note">Sin compromiso. Análisis
+                confidencial de tus procesos
+                digitales.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-background-light dark:bg-background-dark border-t border-slate-100 dark:border-slate-900 pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+                <!-- Column 1: Brand -->
+                <div class="col-span-1 sm:col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-8">
+                        <a href="#" class="block hover:opacity-90 transition-opacity">
+                            <img src="./assets/branding/Balambit_Logo_Horizontal_Web_Transparent.png"
+                                alt="Balambit Logo" class="h-10 dark:invert">
+                        </a>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-500 leading-relaxed max-w-xs" data-i18n="f_desc">
+                        Multiplica la capacidad de tu empresa con inteligencia que trabaja sin descanso, optimizando
+                        cada proceso para que tu crecimiento nunca se detenga.
+                    </p>
+                </div>
+                <!-- Column 2: Platform -->
+                <div>
+                    <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest"
+                        data-i18n="f_platform">Plataforma</h4>
+                    <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition" href="#" data-i18n="f_ai">Inteligencia
+                                Artificial</a></li>
+                        <li><a class="hover:text-primary transition" href="#solutions"
+                                data-i18n="f_int">Integraciones</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Company -->
+                <div>
+                    <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest"
+                        data-i18n="f_company">Empresa</h4>
+                    <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition" href="#engineering" data-i18n="f_about">Sobre
+                                nosotros</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest"
+                        data-i18n="f_contact">Contacto</h4>
+                    <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition" href="mailto:info@balambit.com"
+                                data-i18n="f_email">info@balambit.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-100 dark:border-slate-900 pt-10 flex flex-col md:flex-row justify-center items-center gap-6">
+                <p class="text-sm text-slate-400" data-i18n="f_copy">© 2026 Balambit. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+</body>
+
+</html>
