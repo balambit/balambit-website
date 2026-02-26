@@ -106,18 +106,21 @@
                             class="h-16 py-2 dark:invert object-contain">
                     </a>
                 </div>
-                <div class="hidden md:flex space-x-10 items-center">
-                    <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
-                        href="#results" data-i18n="nav_results">Resultados</a>
-                    <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
-                        href="#engineering" data-i18n="nav_engineering">Ingeniería</a>
-                    <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
-                        href="#solutions" data-i18n="nav_solutions">Soluciones</a>
-                    <a class="bg-secondary dark:bg-primary text-white dark:text-secondary px-7 py-3 rounded-full text-sm font-bold hover:shadow-glow transition transform hover:-translate-y-0.5"
-                        href="#diagnosis" data-i18n="nav_contact">Contactar</a>
+                <div class="flex items-center gap-4">
+                    <!-- Nav Links (Only Desktop) -->
+                    <div class="hidden md:flex space-x-10 items-center mr-6">
+                        <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
+                            href="#results" data-i18n="nav_results">Resultados</a>
+                        <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
+                            href="#engineering" data-i18n="nav_engineering">Ingeniería</a>
+                        <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
+                            href="#solutions" data-i18n="nav_solutions">Soluciones</a>
+                        <a class="bg-secondary dark:bg-primary text-white dark:text-secondary px-7 py-3 rounded-full text-sm font-bold hover:shadow-glow transition transform hover:-translate-y-0.5"
+                            href="#diagnosis" data-i18n="nav_contact">Contactar</a>
+                    </div>
 
-                    <!-- Language Switcher -->
-                    <div class="flex items-center gap-3 border-l border-slate-200 dark:border-slate-800 pl-6 ml-2">
+                    <!-- Language Switcher (Always Visible) -->
+                    <div class="flex items-center gap-3 border-l border-slate-200 dark:border-slate-800 pl-4 md:pl-6">
                         <button data-switch-lang="es"
                             class="group relative flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border border-transparent hover:border-primary/50 transition-all shadow-sm"
                             title="Español (México)">
@@ -127,7 +130,6 @@
                                 <path d="M170.7 0h170.6v512H170.7z" fill="#fff" />
                                 <path d="M341.3 0H512v512H341.3z" fill="#ce1126" />
                                 <circle cx="256" cy="256" r="30" fill="#4d2800" opacity="0.8" />
-                                <!-- Abstraction of the coat of arms -->
                             </svg>
                         </button>
                         <button data-switch-lang="en"
@@ -140,7 +142,6 @@
                                     d="M0 0h512v39.4H0zm0 78.8h512v39.4H0zm0 78.7h512v39.4H0zm0 78.8h512v39.4H0zm0 78.8h512v39.4H0zm0 78.8h512v39.4H0z"
                                     fill="#b22234" />
                                 <path d="M0 0h204.8v275.8H0z" fill="#3c3b6e" />
-                                <!-- Simplified stars abstraction -->
                                 <circle cx="40" cy="40" r="4" fill="#fff" />
                                 <circle cx="80" cy="40" r="4" fill="#fff" />
                                 <circle cx="120" cy="40" r="4" fill="#fff" />
