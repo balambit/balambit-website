@@ -204,7 +204,25 @@
 
             .dark-logo {
                 display: block !important;
+                width: auto !important;
+                max-height: inherit !important;
+                overflow: visible !important;
+                visibility: visible !important;
+                line-height: inherit !important;
             }
+        }
+
+        /* Specific fix for Gmail and other clients that use data-ogsc/data-ogsb */
+        [data-ogsc] .light-logo {
+            display: none !important;
+        }
+
+        [data-ogsc] .dark-logo {
+            display: block !important;
+            width: auto !important;
+            max-height: inherit !important;
+            overflow: visible !important;
+            visibility: visible !important;
         }
     </style>
 </head>
