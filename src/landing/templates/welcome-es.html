@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <title>Balambit</title>
     <!-- Incluir fuentes para clientes de correo que las soporten -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet" />
     <style>
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -140,6 +147,65 @@
             border-radius: 50%;
             margin-right: 6px;
         }
+
+        @media (prefers-color-scheme: dark) {
+
+            body,
+            .wrapper {
+                background-color: #0A0C10 !important;
+            }
+
+            .main {
+                background-color: #14171C !important;
+                border-color: #2D333D !important;
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
+            }
+
+            .header,
+            .content {
+                background-color: #14171C !important;
+            }
+
+            .header {
+                border-bottom-color: #2D333D !important;
+                background-image: linear-gradient(to right, rgba(0, 217, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 217, 255, 0.03) 1px, transparent 1px) !important;
+            }
+
+            h1,
+            strong,
+            .footer b {
+                color: #FFFFFF !important;
+            }
+
+            p,
+            .system-status,
+            .footer {
+                color: #A0AEC0 !important;
+            }
+
+            .tag {
+                background-color: rgba(0, 217, 255, 0.1) !important;
+                color: #00D9FF !important;
+                border: 1px solid rgba(0, 217, 255, 0.2) !important;
+            }
+
+            .cyan {
+                color: #00D9FF !important;
+            }
+
+            .footer {
+                background-color: #0A0C10 !important;
+                border-top-color: #2D333D !important;
+            }
+
+            .light-logo {
+                display: none !important;
+            }
+
+            .dark-logo {
+                display: block !important;
+            }
+        }
     </style>
 </head>
 
@@ -151,15 +217,24 @@
         <table class="main">
             <tr>
                 <td class="header">
-                    <!-- Nota: En modo claro usamos el logo original, sin invertir -->
-                    <img src="https://balambit.com/assets/branding/Balambit_Logo_Horizontal_Web_Transparent.png"
-                        alt="Balambit" width="160" style="display: inline-block;">
+                    <div class="light-logo">
+                        <img src="https://balambit.com/assets/branding/Balambit_Logo_Horizontal_Web_Transparent.png"
+                            alt="Balambit" width="160" style="display: block;">
+                    </div>
+                    <!--[if !mso]><!-->
+                    <div class="dark-logo"
+                        style="display:none; overflow:hidden; width:0; max-height:0; line-height:0; visibility:hidden;">
+                        <img src="https://balambit.com/assets/branding/Balambit_Logo_Horizontal_Web_Transparent_dark.png"
+                            alt="Balambit" width="160" style="display: block;">
+                    </div>
+                    <!--<![endif]-->
                     <div class="system-status" style="float: right; margin-top: 10px;"><span
                             class="status-dot"></span>system_status: online</div>
                 </td>
             </tr>
             <tr>
                 <td class="content">
+
                     <div class="tag">Escalabilidad Activada</div>
                     <h1>Tu mejor vendedor <br /> <span class="cyan">no debería dormir.</span></h1>
 
