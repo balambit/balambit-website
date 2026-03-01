@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balambit</title>
+    <!-- Incluir fuentes para clientes de correo que las soporten -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F8FAFC;
+            font-family: 'Roboto', 'Inter', Helvetica, Arial, sans-serif;
+            color: #1E293B;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #F8FAFC;
+        }
+
+        .main {
+            background-color: #FFFFFF;
+            margin: 40px auto;
+            width: 100%;
+            max-width: 600px;
+            border-spacing: 0;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            background-image: linear-gradient(to right, rgba(0, 217, 255, 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 217, 255, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+            padding: 50px 30px;
+            text-align: left;
+            border-bottom: 1px solid #F1F5F9;
+            background-color: #FFFFFF;
+        }
+
+        .content {
+            padding: 40px 30px;
+            background-color: #FFFFFF;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background-color: rgba(0, 217, 255, 0.15);
+            color: #009BB5;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        h1 {
+            font-family: 'Inter', Helvetica, Arial, sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0 0 24px 0;
+            color: #0F172A;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #475569;
+            margin: 0 0 24px 0;
+            font-weight: 400;
+        }
+
+        strong {
+            color: #0F172A;
+            font-weight: 700;
+        }
+
+        .cyan {
+            color: #00A6C2;
+        }
+
+        .cta-container {
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #00D9FF;
+            color: #0A0C10;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid #00BDE6;
+            text-align: center;
+        }
+
+        .footer {
+            padding: 40px 30px;
+            border-top: 1px solid #F1F5F9;
+            font-size: 13px;
+            color: #64748B;
+            background-color: #F8FAFC;
+        }
+
+        .footer a {
+            color: #009BB5;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .system-status {
+            font-family: monospace;
+            font-size: 11px;
+            color: #64748B;
+            letter-spacing: -0.5px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #10B981;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="display:none; font-size:1px; color:#F8FAFC; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;">
+        The system is online. Discover the competitive edge of intelligent automation.</div>
+    <center class="wrapper">
+        <table class="main">
+            <tr>
+                <td class="header">
+                    <!-- Nota: En modo claro usamos el logo original, sin invertir -->
+                    <img src="https://balambit.com/assets/branding/Balambit_Logo_Horizontal_Web_Transparent.png"
+                        alt="Balambit" width="160" style="display: inline-block;">
+                    <div class="system-status" style="float: right; margin-top: 10px;"><span
+                            class="status-dot"></span>system_status: online</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <div class="tag">Scalability Activated</div>
+                    <h1>Your best salesperson <br /> <span class="cyan">should never sleep.</span></h1>
+
+                    <p>Hi {{ $json.email }},</p>
+                    <p>You have taken the first step toward eliminating your company's most expensive bottleneck:
+                        <strong>human waiting times</strong>.
+                    </p>
+                    <p>At Balambit, we don't send newsletters; we design <strong>growth architectures</strong>. As you
+                        read this, an intelligent system could be qualifying your leads, answering complex queries, and
+                        booking sales meetings in under 60 seconds.</p>
+
+                    <p><strong>78% of sales go to the first responder.</strong> Your competition is not resting.</p>
+
+                    <div class="cta-container">
+                        <a href="TU_LINK_DE_CALENDLY_AQUI" class="cta-button">Start Diagnosis</a>
+                    </div>
+
+                    <p style="font-size: 14px; margin-top: 40px; color: #64748B;">Let's talk about how we can optimize
+                        your commercial process in a 15-minute session.<br />No commitment. Pure strategic insight.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer">
+                    <p style="margin-bottom: 12px;"><b style="color: #334155;">Balambit Engineering Systems</b></p>
+                    <p style="margin-bottom: 24px;">Autonomous Operations | Neural Architectures</p>
+                    <p>You are receiving this email because you requested a diagnosis at <a
+                            href="https://balambit.com">balambit.com</a></p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

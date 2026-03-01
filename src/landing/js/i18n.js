@@ -40,11 +40,15 @@ const translations = {
         mod_po_title: "Orquestación de Procesos",
         mod_po_desc: "Conectamos tus silos de información. Tu CRM habla con tu email, tu web y tu facturación automáticamente.",
         mod_po_link: "Explorar módulo",
-        diag_title: "¿Tu empresa es escalable?",
-        diag_desc: "Descubre cuánto dinero estás dejando sobre la mesa por ineficiencias operativas.",
-        diag_input: "tu@empresa.com",
-        diag_cta: "¡Quiero mi diagnóstico gratuito!",
-        diag_note: "Sin compromiso. Análisis confidencial de tus procesos digitales.",
+        mod_po_link: "Explorar módulo",
+        contact_title: "¿Tu empresa es escalable?",
+        contact_desc: "Descubre cuánto dinero estás dejando sobre la mesa por ineficiencias operativas.",
+        contact_input: "tu@empresa.com",
+        contact_cta: "¡Quiero mi diagnóstico gratuito!",
+        contact_note: "Sin compromiso. Análisis confidencial de tus procesos digitales.",
+        contact_loading: "Procesando...",
+        contact_success: "¡Solicitud Enviada!",
+        contact_error: "Error. Reintentar",
         f_desc: "Multiplica la capacidad de tu empresa con inteligencia que trabaja sin descanso, optimizando cada proceso para que tu crecimiento nunca se detenga.",
         f_platform: "Plataforma",
         f_ai: "Inteligencia Artificial",
@@ -96,11 +100,15 @@ const translations = {
         mod_po_title: "Process Orchestration",
         mod_po_desc: "We connect your information silos. Your CRM speaks to your email, web, and billing automatically.",
         mod_po_link: "Explore module",
-        diag_title: "Is your business scalable?",
-        diag_desc: "Discover how much money you're leaving on the table due to operational inefficiencies.",
-        diag_input: "you@company.com",
-        diag_cta: "Get my free diagnosis!",
-        diag_note: "No commitment. Confidential analysis of your digital processes.",
+        mod_po_link: "Explore module",
+        contact_title: "Is your business scalable?",
+        contact_desc: "Discover how much money you're leaving on the table due to operational inefficiencies.",
+        contact_input: "you@company.com",
+        contact_cta: "Get my free diagnosis!",
+        contact_note: "No commitment. Confidential analysis of your digital processes.",
+        contact_loading: "Processing...",
+        contact_success: "Request Sent!",
+        contact_error: "Error. Retry",
         f_desc: "Multiply your company's capacity with intelligence that works relentlessly, optimizing every process so your growth never stops.",
         f_platform: "Platform",
         f_ai: "Artificial Intelligence",
@@ -169,6 +177,10 @@ class I18n {
         if (dict.title) {
             document.title = dict.title;
         }
+    }
+
+    getTranslation(key) {
+        return translations[this.language][key] || key;
     }
 
     setupSwitchers() {
