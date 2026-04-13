@@ -1,7 +1,7 @@
 # Balambit High Engineering
 
 ## Overview
-Balambit is a high-level automation agency focused on systems engineering for digital sales forces. We leverage neural networks and resilient architectures to deploy scalable digital workforces.
+Balambit is a high-level automation platform focused on systems engineering for digital sales forces. We leverage neural networks and resilient architectures to deploy scalable digital workforces.
 
 ## Project Vision
 To become the leading platform for enterprise-grade autonomous business processes.
