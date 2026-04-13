@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balambit Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <main class="screen screen-chat is-active" data-screen="chat">
+      <div class="site-grid"></div>
+      <div class="ambient ambient-one"></div>
+
+      <header class="hook-section">
+        <h2 data-i18n="hook_title">Cada mensaje sin respuesta es una cita que no se agenda.</h2>
+      </header>
+
+      <div class="chat-layout">
+        <section class="demo-stage">
+          <header class="brand-bar">
+            <img class="brand-logo"
+              src="https://balambit.com/assets/branding/Balambit_Logo_Horizontal_Web_Transparent.png" alt="Balambit" />
+            <div class="brand-badge">
+              <span class="brand-badge-dot"></span>
+              <span data-i18n="brand_badge">Live</span>
+            </div>
+          </header>
+
+          <div class="iphone-frame" id="phone-hotspot" role="button" tabindex="0" aria-label="Avanzar conversacion">
+            <div class="iphone-notch"></div>
+            <div class="iphone-screen">
+              <div class="wa-statusbar">
+                <span>5:37</span>
+                <div class="wa-status-icons">
+                  <span>LTE</span>
+                  <span>74%</span>
+                </div>
+              </div>
+
+              <div class="wa-header">
+                <div class="wa-contact">
+                  <button class="wa-back" aria-hidden="true">
+                    <span></span>
+                  </button>
+                  <div class="wa-avatar">C</div>
+                  <div class="wa-contact-copy">
+                    <strong data-i18n="demo_vis_user">Clinica Dental Norte</strong>
+                    <span data-i18n="demo_vis_status">online</span>
+                  </div>
+                </div>
+                <div class="wa-actions" aria-hidden="true">
+                  <span class="wa-camera"></span>
+                  <span class="wa-phone"></span>
+                  <span class="wa-menu"></span>
+                </div>
+              </div>
+
+              <div class="wa-chat-bg">
+                <div class="wa-chat" id="chat-thread"></div>
+              </div>
+
+              <div class="wa-input">
+                <span class="wa-emoji"></span>
+                <div class="wa-input-pill" data-i18n="demo_vis_input">Type a message</div>
+                <span class="wa-attach"></span>
+                <span class="wa-camera-small"></span>
+                <button class="wa-mic" aria-hidden="true">
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tap-hint">
+            <strong data-i18n="phone_hint">Toca el iPhone para avanzar</strong>
+          </div>
+        </section>
+
+        <aside class="insight-panel">
+          <div class="panel-kicker" data-i18n="insight_kicker">Balambit Conversion Engine</div>
+          <h1 data-i18n="insight_title">De WhatsApp a cita.</h1>
+          <p class="panel-intro" data-i18n="insight_desc">
+            Balambit responde, califica y agenda mientras la conversacion avanza.
+          </p>
+
+          <div class="stepper-card">
+            <div class="stepper-copy">
+              <span class="step-label" data-i18n="step_label">Paso actual</span>
+              <strong id="step-title">Paso 1 de 5</strong>
+            </div>
+            <div class="step-meter">
+              <div class="step-meter-fill" id="step-meter-fill"></div>
+            </div>
+          </div>
+
+          <div class="insight-stack">
+            <article class="insight-card">
+              <span class="insight-label" data-i18n="patient_label">Lo que hizo el paciente</span>
+              <strong id="patient-action">Pregunto por el precio de una limpieza.</strong>
+            </article>
+
+            <article class="insight-card is-accent">
+              <span class="insight-label" data-i18n="ai_label">Lo que hizo Balambit</span>
+              <strong id="ai-action">Respondio en segundos con precio y siguiente paso.</strong>
+            </article>
+
+            <article class="insight-card">
+              <span class="insight-label" data-i18n="impact_label">Impacto para tu clínica</span>
+              <strong id="business-impact">El lead no se enfria y entra directo al flujo de conversion.</strong>
+            </article>
+          </div>
+
+          <div class="signal-board" id="signal-board"></div>
+
+          <div class="value-card">
+            <span class="value-label" data-i18n="value_label">Valor inmediato</span>
+            <strong id="value-title">Atencion comercial 24/7</strong>
+            <p id="value-copy">
+              Cada mensaje entrante puede avanzar a conversion sin depender de disponibilidad humana.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <main class="screen screen-confirmation" data-screen="confirmation">
+      <div class="site-grid"></div>
+      <div class="ambient ambient-two"></div>
+
+      <section class="confirmation-shell">
+        <header class="confirmation-brand">
+          <img class="brand-logo brand-logo-large"
+            src="https://balambit.com/assets/branding/Balambit_Logo_Horizontal_Web_Transparent.png" alt="Balambit" />
+          <div class="brand-badge brand-badge-light">
+            <span class="brand-badge-dot"></span>
+            <span data-i18n="conf_badge">Resultado de negocio</span>
+          </div>
+        </header>
+
+        <div class="confirmation-card">
+          <div class="confirmation-icon">1</div>
+          <p class="confirmation-kicker" data-i18n="conf_kicker">Nueva cita generada automaticamente</p>
+          <h2 data-i18n="conf_title">Una conversacion entrante se convirtio en una cita confirmada.</h2>
+          <div class="confirmation-time" data-i18n="conf_time">Martes, 5:00 PM</div>
+          <p class="confirmation-copy" data-i18n="conf_desc">
+            Sin seguimiento manual, sin tiempos muertos y sin perder al paciente
+            entre mensajes.
+          </p>
+
+          <div class="business-grid">
+            <article class="business-card">
+              <span class="business-label" data-i18n="biz_speed_label">Velocidad</span>
+              <strong data-i18n="biz_speed_value">Respuesta en segundos</strong>
+            </article>
+            <article class="business-card">
+              <span class="business-label" data-i18n="biz_conv_label">Conversion</span>
+              <strong data-i18n="biz_conv_value">De interes a agenda real</strong>
+            </article>
+            <article class="business-card">
+              <span class="business-label" data-i18n="biz_ops_label">Operacion</span>
+              <strong data-i18n="biz_ops_value">Menos carga para recepcion</strong>
+            </article>
+          </div>
+
+          <div class="business-impact-msg">
+            <p data-i18n="impact_msg1">✅ Menos pacientes perdidos</p>
+            <p data-i18n="impact_msg2">✅ Más citas automáticas</p>
+            <p data-i18n="impact_msg3">✅ Sin contratar más personal</p>
+          </div>
+
+          <div class="action-group">
+            <p class="cta-urgency" data-i18n="cta_urgency">Cada día que no lo tienes activo, estás perdiendo citas.</p>
+            <button class="primary-cta fade-in" onclick="window.location.href='../index.html#contact'" data-i18n="cta_primary">Quiero esto en mi clínica</button>
+            <button class="secondary-cta is-muted" id="restart-demo" data-i18n="cta_secondary">Volver a ver demo</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

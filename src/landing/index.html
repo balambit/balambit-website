@@ -110,6 +110,8 @@
                     <!-- Nav Links (Only Desktop) -->
                     <div class="hidden md:flex space-x-10 items-center mr-6">
                         <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
+                            href="#demo-section" data-i18n="nav_demo">Demo</a>
+                        <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
                             href="#results" data-i18n="nav_results">Resultados</a>
                         <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition"
                             href="#engineering" data-i18n="nav_engineering">Ingeniería</a>
@@ -168,83 +170,77 @@
                 <div class="lg:col-span-6 text-center lg:text-left mb-16 lg:mb-0">
                     <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-8 border border-primary/20"
                         data-i18n="hero_tag">
-                        Ingeniería de Alto Nivel
+                        Plataforma de Automatización Conversacional
                     </div>
                     <h1 class="font-display text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]"
                         data-i18n="hero_title">
-                        Tu mejor vendedor <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">no
-                            duerme.</span>
+                        Convierte mensajes en <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">acciones automáticas.</span>
                     </h1>
                     <p class="font-body text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
                         data-i18n="hero_desc">
-                        Despliega una fuerza laboral digital escalable. Automatización de procesos comerciales impulsada
-                        por redes neuronales y arquitectura resiliente.
+                        Balambit responde, califica y ejecuta procesos 24/7 directamente desde canales como WhatsApp. Escala tu operación sin aumentar tu personal.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                         <a class="inline-flex items-center justify-center px-10 py-5 border border-transparent text-base font-bold rounded-full text-white bg-primary hover:bg-cyan-400 shadow-glow transition-all duration-300"
-                            href="#contact">
-                            <span data-i18n="hero_cta">Comenzar Diagnóstico</span>
+                            href="#demo-section">
+                            <span data-i18n="hero_cta">Acceder a la Demo</span>
                             <span class="material-icons ml-2 text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
-                <!-- Visual Element -->
+                <!-- Visual Element: The Intelligent Pipeline -->
                 <div class="lg:col-span-6 relative">
-                    <div
-                        class="relative rounded-2xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-2xl p-10 premium-blur bg-opacity-90 dark:bg-opacity-80">
-                        <div class="absolute -top-16 -right-16 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-                        <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-                        <div class="flex flex-col space-y-8">
-                            <div
-                                class="flex justify-between items-center border-b border-slate-100 dark:border-slate-700 pb-5">
-                                <div class="flex gap-2.5">
-                                    <div class="w-3.5 h-3.5 rounded-full bg-red-400"></div>
-                                    <div class="w-3.5 h-3.5 rounded-full bg-yellow-400"></div>
-                                    <div class="w-3.5 h-3.5 rounded-full bg-green-400"></div>
+                    <div class="relative rounded-3xl bg-white/80 dark:bg-surface-dark/80 border border-slate-200 dark:border-slate-800 shadow-2xl p-8 premium-blur overflow-hidden">
+                        <!-- Abstract Background Glows -->
+                        <div class="absolute -top-24 -right-24 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+                        <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+                        <div class="relative z-10 flex flex-col space-y-10">
+                            <!-- Input: The Human Message -->
+                            <div class="flex flex-col items-start translate-x-4">
+                                <div class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-6 py-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-200 dark:border-slate-700 max-w-[80%] relative">
+                                    <div class="absolute -left-2 top-0 w-2 h-2 bg-slate-100 dark:bg-slate-800 border-l border-t border-slate-200 dark:border-slate-700 -rotate-45"></div>
+                                    <p class="text-sm font-medium leading-relaxed" data-i18n="hero_vis_input">Hola, ¿tienen disponibilidad mañana?</p>
                                 </div>
-                                <div class="text-xs text-slate-400 font-mono tracking-tighter" data-i18n="status_label">
-                                    system_status: opt_active
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-6">
-                                <div
-                                    class="p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-700">
-                                    <div class="flex items-end space-x-3 h-32 mb-3">
-                                        <div class="w-1/4 bg-slate-200 dark:bg-slate-700 h-1/2 rounded-t-sm"></div>
-                                        <div class="w-1/4 bg-slate-300 dark:bg-slate-600 h-2/3 rounded-t-sm"></div>
-                                        <div class="w-1/4 bg-primary/40 h-3/4 rounded-t-sm"></div>
-                                        <div class="w-1/4 bg-primary h-full rounded-t-sm shadow-glow"></div>
-                                    </div>
-                                    <div
-                                        class="h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                                        <div class="bg-primary h-full w-3/4"></div>
-                                    </div>
-                                </div>
-                                <div class="relative flex items-center justify-center p-6">
-                                    <svg class="w-full h-full text-slate-200 dark:text-slate-700" viewBox="0 0 100 100">
-                                        <circle class="text-primary/10 fill-current" cx="50" cy="50" r="20"></circle>
-                                        <circle class="text-primary fill-current shadow-glow" cx="50" cy="50" r="10">
-                                        </circle>
-                                        <circle cx="20" cy="20" fill="currentColor" r="6"></circle>
-                                        <circle cx="80" cy="80" fill="currentColor" r="6"></circle>
-                                        <circle cx="80" cy="20" fill="currentColor" r="6"></circle>
-                                        <circle cx="20" cy="80" fill="currentColor" r="6"></circle>
-                                        <path d="M25 25 L45 45 M55 55 L75 75 M75 25 L55 45 M45 55 L25 75"
-                                            stroke="currentColor" stroke-width="2.5"></path>
-                                    </svg>
+                                <div class="flex items-center gap-2 mt-3 ml-2 opacity-50">
+                                    <span class="material-icons text-xs">whatsapp</span>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase">WhatsApp Lead</span>
                                 </div>
                             </div>
-                            <div
-                                class="flex items-center gap-5 bg-primary/5 dark:bg-primary/10 p-5 rounded-xl border border-primary/20">
-                                <span class="material-icons text-primary text-3xl">auto_graph</span>
-                                <div>
-                                    <div class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="opt_title">
-                                        Optimización en Tiempo
-                                        Real</div>
-                                    <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="opt_desc">
-                                        Algoritmos predictivos
-                                        ajustando el flujo de conversión.</div>
+
+                            <!-- Processing: The Engine -->
+                            <div class="flex flex-col items-center space-y-4 relative">
+                                <!-- Vertical Line Connectors -->
+                                <div class="absolute top-[-40px] bottom-[-40px] w-0.5 bg-gradient-to-b from-primary/50 via-primary to-primary/50 z-0"></div>
+                                
+                                <div class="relative z-10 py-1.5 px-4 bg-secondary dark:bg-black border border-primary/30 rounded-full flex items-center gap-3 shadow-[0_0_15px_rgba(0,217,255,0.2)]">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></div>
+                                    <span class="text-[10px] font-mono text-primary font-bold tracking-tighter uppercase" data-i18n="hero_vis_step1">[ANALIZANDO_INTENCIÓN]</span>
+                                </div>
+
+                                <div class="relative z-10 py-1.5 px-4 bg-secondary dark:bg-black border border-primary/30 rounded-full flex items-center gap-3 shadow-[0_0_15px_rgba(0,217,255,0.2)]">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary animate-ping" style="animation-delay: 0.5s"></div>
+                                    <span class="text-[10px] font-mono text-primary font-bold tracking-tighter uppercase" data-i18n="hero_vis_step2">[EXTRAYENDO_DATOS]</span>
+                                </div>
+                            </div>
+
+                            <!-- Output: The Business Result -->
+                            <div class="flex flex-col items-end -translate-x-4">
+                                <div class="bg-primary/10 border border-primary/30 p-5 rounded-2xl shadow-glow transition hover:shadow-[0_0_25px_rgba(0,217,255,0.4)]">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-secondary shadow-lg">
+                                            <span class="material-icons">event_available</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="hero_vis_output_title">Cita Agendada</div>
+                                            <div class="text-xs text-primary font-medium" data-i18n="hero_vis_output_desc">Mañana, 4:30 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 mt-3 mr-2 opacity-50">
+                                    <span class="text-[10px] font-bold tracking-widest uppercase">Business Action Executed</span>
+                                    <span class="material-icons text-xs text-green-500">check_circle</span>
                                 </div>
                             </div>
                         </div>
@@ -254,201 +250,177 @@
         </div>
     </section>
 
-    <!-- Problem Section -->
+    <!-- Demo Showcase Section -->
+    <section id="demo-section" class="section-spacing bg-white dark:bg-surface-dark border-b border-t border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="lg:flex lg:items-center lg:gap-16">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-cyan-500/10 text-primary text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20" data-i18n="demo_badge">Showcase Técnico</div>
+                    <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6" data-i18n="demo_title">Prueba interactiva: Agendamiento Automático</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed" data-i18n="demo_desc">Interactúa con un entorno de prueba cerrado diseñado para mostrar cómo Balambit atiende a un paciente en tiempo real, comprende contextos y cruza información de agendas.</p>
+                    <a href="./demo/index.html" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl text-white bg-primary hover:bg-cyan-400 shadow-glow transition-all duration-300">
+                        <span data-i18n="demo_cta">Abrir Modo Demo</span>
+                        <span class="material-icons ml-2 text-sm">open_in_new</span>
+                    </a>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <!-- Basic Mockup visualization -->
+                    <div class="relative mx-auto w-full max-w-[320px] aspect-[9/19] bg-slate-900 rounded-[2.5rem] border-[8px] border-slate-800 shadow-2xl overflow-hidden flex flex-col">
+                        <div class="bg-slate-800 h-16 w-full flex items-center px-6">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                                <span class="material-icons text-primary text-sm">smart_toy</span>
+                            </div>
+                            <div>
+                                <div class="text-white text-sm font-bold" data-i18n="demo_vis_user">Clínica Dental</div>
+                                <div class="text-green-400 text-xs" data-i18n="demo_vis_status">En línea</div>
+                            </div>
+                        </div>
+                        <div class="flex-1 bg-[#E5DDD5] dark:bg-[#0b141a] p-4 flex flex-col gap-4 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/subtle-dots.png')] opacity-20"></div>
+                            <div class="bg-white dark:bg-[#202c33] text-slate-800 dark:text-white p-3 rounded-xl rounded-tl-none self-start max-w-[85%] shadow-sm text-sm relative z-10" data-i18n="demo_vis_msg1">
+                                Hola, ¿tienen disponibilidad para una limpieza mañana?
+                            </div>
+                            <div class="bg-[#dcf8c6] dark:bg-[#005c4b] text-slate-800 dark:text-white p-3 rounded-xl rounded-tr-none self-end max-w-[85%] shadow-sm text-sm relative z-10" data-i18n="demo_vis_msg2">
+                                ¡Hola! Sí, tenemos un espacio a las 4:30 PM. ¿Te agendamos?
+                            </div>
+                            <div class="bg-white dark:bg-[#202c33] text-slate-800 dark:text-white p-3 rounded-xl rounded-tl-none self-start max-w-[85%] shadow-sm text-sm relative z-10" data-i18n="demo_vis_msg3">
+                                Sí, perfecto. A esa hora está bien.
+                            </div>
+                        </div>
+                        <div class="bg-slate-100 dark:bg-[#202c33] h-14 w-full flex items-center px-4 text-slate-400">
+                            <span class="material-icons mr-3">add</span>
+                            <div class="flex-1 bg-white dark:bg-[#2a3942] rounded-full h-9"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversational Engine Section (Formerly Problem Section) -->
     <section class="section-spacing bg-secondary text-white relative" id="results">
         <div
             class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
         </div>
         <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
             <div class="max-w-3xl mx-auto text-center mb-24">
-                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-8" data-i18n="prob_title">El cuello de botella
-                    es humano.</h2>
-                <p class="text-xl text-slate-300 leading-relaxed font-light" data-i18n="prob_desc">
-                    Tus leads se enfrían en minutos. La 'Golden Window' de respuesta es de <span
-                        class="text-primary font-bold">5 minutos</span>.
-                    Si tu equipo tarda horas, estás perdiendo el 80% de tus oportunidades frente a competidores
-                    automatizados.
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-8" data-i18n="pipeline_title">De un simple chat a un proceso completado.</h2>
+                <p class="text-xl text-slate-300 leading-relaxed font-light" data-i18n="pipeline_desc">
+                    Balambit gestiona el ciclo completo de la intención del cliente, sin intervención humana.
                 </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div
-                    class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group">
-                    <div
-                        class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mb-8 group-hover:bg-red-500/20 transition">
-                        <span class="material-icons text-red-400 text-3xl">timer_off</span>
+            <div class="grid md:grid-cols-3 gap-10 relative">
+                <!-- Visual Pipeline Connector (Desktop only) -->
+                <div class="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group relative z-10">
+                    <div class="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center mb-8 group-hover:bg-blue-500/20 transition">
+                        <span class="material-icons text-blue-400 text-3xl">chat</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="card_td_title">Respuesta Tardía</h3>
-                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="card_td_desc">El 78% de las ventas
-                        van al proveedor que
-                        responde primero. La velocidad no es un lujo, es supervivencia.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="step1_title">1. Analiza e Informa</h3>
+                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="step1_desc">Atención inmediata basada en el conocimiento de tu empresa.</p>
                 </div>
-                <div
-                    class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group">
-                    <div
-                        class="w-16 h-16 rounded-full bg-orange-500/10 flex items-center justify-center mb-8 group-hover:bg-orange-500/20 transition">
-                        <span class="material-icons text-orange-400 text-3xl">leak_add</span>
+                <div class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group relative z-10">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition">
+                        <span class="material-icons text-primary text-3xl">filter_alt</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="card_fl_title">Fugas en el Funnel</h3>
-                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="card_fl_desc">Leads cualificados
-                        abandonados por falta de
-                        seguimiento o procesos manuales propensos a errores.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="step2_title">2. Califica y Captura</h3>
+                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="step2_desc">Identifica la intención del usuario y extrae los datos clave.</p>
                 </div>
-                <div
-                    class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group">
-                    <div
-                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition">
-                        <span class="material-icons text-primary text-3xl">trending_up</span>
+                <div class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 hover:border-primary/40 transition duration-500 group relative z-10">
+                    <div class="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-8 group-hover:bg-green-500/20 transition">
+                        <span class="material-icons text-green-400 text-3xl">task_alt</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="card_ls_title">Escalabilidad Limitada</h3>
-                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="card_ls_desc">Contratar más
-                        vendedores es lineal. Automatizar
-                        con Balambit es exponencial.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="step3_title">3. Canaliza y Ejecuta</h3>
+                    <p class="text-slate-400 text-base leading-relaxed" data-i18n="step3_desc">Agenda citas, envía confirmaciones o notifica a tu equipo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Engineering DNA Section -->
-    <section
-        class="section-spacing bg-background-light dark:bg-background-dark border-b border-slate-100 dark:border-slate-900"
-        id="engineering">
+    <!-- Simplified Engineering Section -->
+    <section class="section-spacing bg-background-light dark:bg-background-dark border-b border-slate-100 dark:border-slate-900" id="engineering">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid lg:grid-cols-2 gap-24 items-center">
                 <div>
-                    <h2 class="font-display text-4xl font-bold text-slate-900 dark:text-white mb-8"
-                        data-i18n="eng_title">
-                        ADN de Alta Ingeniería
-                    </h2>
-                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed" data-i18n="eng_desc">
-                        No somos una agencia de marketing. Somos ingenieros de sistemas construyendo la infraestructura
-                        comercial del futuro. Nuestra arquitectura soporta cargas masivas sin perder precisión.
+                    <h2 class="font-display text-4xl font-bold text-slate-900 dark:text-white mb-8" data-i18n="eng_title_v2">Infraestructura Empresarial</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed" data-i18n="eng_desc_v2">
+                        Construido bajo estándares estrictos de seguridad, escalabilidad e integración.
                     </p>
                     <ul class="space-y-6">
                         <li class="flex items-start">
                             <span class="material-icons text-primary mt-1 mr-4 text-2xl">check_circle</span>
-                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li1">Infraestructura
-                                Serverless de
-                                auto-escalado</span>
+                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li1">Arquitectura Serverless de alta disponibilidad</span>
                         </li>
                         <li class="flex items-start">
                             <span class="material-icons text-primary mt-1 mr-4 text-2xl">check_circle</span>
-                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li2">Integración
-                                nativa con CRMs
-                                Enterprise</span>
+                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li2">Integraciones vía Webhooks y APIs externas</span>
                         </li>
                         <li class="flex items-start">
                             <span class="material-icons text-primary mt-1 mr-4 text-2xl">check_circle</span>
-                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li3">Seguridad de
-                                datos de grado
-                                bancario</span>
+                            <span class="text-slate-700 dark:text-slate-300 text-lg" data-i18n="eng_li3">Privacidad de datos en tránsito</span>
                         </li>
                     </ul>
                 </div>
                 <div class="grid grid-cols-2 gap-8">
-                    <div
-                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
-                        <div class="text-5xl font-display font-bold text-primary mb-3">+17k</div>
-                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
-                            data-i18n="stat_trans">
-                            Transacciones / seg</div>
+                    <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                        <div class="text-5xl font-display font-bold text-primary mb-3">~2s</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest" data-i18n="stat_trans">Respuestas</div>
                     </div>
-                    <div
-                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                    <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
                         <div class="text-5xl font-display font-bold text-slate-900 dark:text-white mb-3">99.9%</div>
-                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
-                            data-i18n="stat_uptime">
-                            Uptime Garantizado</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest" data-i18n="stat_uptime">Uptime Garantizado</div>
                     </div>
-                    <div
-                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                    <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
                         <div class="text-5xl font-display font-bold text-slate-900 dark:text-white mb-3">24/7</div>
-                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
-                            data-i18n="stat_ops">
-                            Operación Continua</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest" data-i18n="stat_ops">Operación Continua</div>
                     </div>
-                    <div
-                        class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
-                        <div class="text-5xl font-display font-bold text-primary mb-3">3x</div>
-                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest"
-                            data-i18n="stat_roi">ROI
-                            Promedio</div>
+                    <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-3xl border border-slate-100 dark:border-slate-800 text-center hover:border-primary/30 transition shadow-soft">
+                        <div class="text-5xl font-display font-bold text-primary mb-3">0</div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest" data-i18n="stat_roi">Sin esperas</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
+    <!-- Adaptability Section (Formerly Solutions) -->
     <section class="section-spacing bg-slate-50 dark:bg-[#0D1117]" id="solutions">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="text-center mb-24">
-                <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6"
-                    data-i18n="sol_title">Ecosistema
-                    de Automatización</h2>
-                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-light" data-i18n="sol_desc">
-                    Soluciones modulares
-                    diseñadas para trabajar en sincronía perfecta.</p>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6" data-i18n="adapt_title">Adaptable a cualquier flujo de negocio.</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-light" data-i18n="adapt_desc">Configura Balambit para resolver las necesidades operativas de tu industria.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-10">
-                <div
-                    class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-icons text-9xl text-primary">smart_toy</span>
+                        <span class="material-icons text-9xl text-primary">real_estate_agent</span>
                     </div>
-                    <div
-                        class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                        <span class="material-icons text-blue-600 dark:text-blue-400 text-3xl">support_agent</span>
+                    <div class="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-icons text-blue-600 dark:text-blue-400 text-3xl">location_city</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="mod_ai_title">
-                        Asistentes de Venta AI</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8"
-                        data-i18n="mod_ai_desc">Chatbots cognitivos que
-                        califican leads, agendan citas y responden dudas técnicas sin intervención humana.</p>
-                    <a class="text-primary font-bold text-sm hover:underline flex items-center decoration-2 underline-offset-4"
-                        href="#">
-                        <span data-i18n="mod_ai_link">Explorar módulo</span> <span
-                            class="material-icons text-sm ml-2">arrow_forward</span>
-                    </a>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="case1_title">Real Estate</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8" data-i18n="case1_desc">Calificación automática de prospectos inmobiliarios y agendamiento de visitas a propiedades.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-icons text-9xl text-primary">radar</span>
+                        <span class="material-icons text-9xl text-primary">medical_services</span>
                     </div>
-                    <div
-                        class="w-16 h-16 rounded-2xl bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                        <span class="material-icons text-primary text-3xl">person_search</span>
+                    <div class="w-16 h-16 rounded-2xl bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-icons text-primary text-3xl">local_hospital</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="mod_ip_title">
-                        Prospección Inteligente</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8"
-                        data-i18n="mod_ip_desc">Algoritmos de scraping
-                        ético y enriquecimiento de datos para encontrar a tu cliente ideal en el momento exacto.</p>
-                    <a class="text-primary font-bold text-sm hover:underline flex items-center decoration-2 underline-offset-4"
-                        href="#">
-                        <span data-i18n="mod_ip_link">Explorar módulo</span> <span
-                            class="material-icons text-sm ml-2">arrow_forward</span>
-                    </a>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="case2_title">Centros de Salud</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8" data-i18n="case2_desc">Resolución de dudas frecuentes y coordinación automática de agendas médicas.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-white dark:bg-surface-dark rounded-3xl p-10 shadow-soft hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-800 hover:-translate-y-2 relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-icons text-9xl text-primary">hub</span>
+                        <span class="material-icons text-9xl text-primary">fitness_center</span>
                     </div>
-                    <div
-                        class="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                        <span class="material-icons text-indigo-600 dark:text-indigo-400 text-3xl">account_tree</span>
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-icons text-indigo-600 dark:text-indigo-400 text-3xl">card_membership</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="mod_po_title">
-                        Orquestación de Procesos</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8"
-                        data-i18n="mod_po_desc">Conectamos tus silos de
-                        información. Tu CRM habla con tu email, tu web y tu facturación automáticamente.</p>
-                    <a class="text-primary font-bold text-sm hover:underline flex items-center decoration-2 underline-offset-4"
-                        href="#">
-                        <span data-i18n="mod_po_link">Explorar módulo</span> <span
-                            class="material-icons text-sm ml-2">arrow_forward</span>
-                    </a>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="case3_title">Gimnasios y Wellness</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8" data-i18n="case3_desc">Seguimiento inmediato de nuevas membresías, información de planes, horarios y clases promocionales.</p>
                 </div>
             </div>
         </div>
@@ -465,12 +437,8 @@
             </svg>
         </div>
         <div class="max-w-4xl mx-auto px-6 lg:px-12 relative z-10 text-center">
-            <h2 class="font-display text-5xl lg:text-6xl font-bold text-white mb-8" data-i18n="contact_title">¿Tu
-                empresa
-                es escalable?</h2>
-            <p class="text-2xl text-slate-300 mb-12 font-light" data-i18n="contact_desc">Descubre cuánto dinero estás
-                dejando sobre la mesa por
-                ineficiencias operativas.</p>
+            <h2 class="font-display text-5xl lg:text-6xl font-bold text-white mb-8" data-i18n="contact_title">Automatiza tu proceso comercial</h2>
+            <p class="text-2xl text-slate-300 mb-12 font-light" data-i18n="contact_desc">Descubre cómo Balambit se adapta a tu flujo operativo para empezar a capturar y canalizar clientes en piloto automático.</p>
             <div
                 class="bg-white/5 backdrop-blur-xl border border-white/10 p-2.5 rounded-full max-w-2xl mx-auto flex flex-col sm:flex-row gap-3">
                 <input id="contact-email"
@@ -478,12 +446,10 @@
                     placeholder="tu@empresa.com" type="email" data-i18n="contact_input" />
                 <button id="contact-submit"
                     class="bg-primary hover:bg-cyan-400 text-secondary font-black py-4 px-10 rounded-full whitespace-nowrap transition-all shadow-glow flex items-center justify-center gap-2">
-                    <span data-i18n="contact_cta">¡Quiero mi diagnóstico gratuito!</span>
+                    <span data-i18n="contact_cta">Diagnóstico gratuito</span>
                 </button>
             </div>
-            <p class="mt-8 text-sm text-slate-500 tracking-tight" data-i18n="contact_note">Sin compromiso. Análisis
-                confidencial de tus procesos
-                digitales.</p>
+            <p class="mt-8 text-sm text-slate-500 tracking-tight" data-i18n="contact_note">Sin compromiso. Análisis confidencial de tus flujos digitales.</p>
         </div>
     </section>
 
