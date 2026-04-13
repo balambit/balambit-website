@@ -189,62 +189,58 @@
                         </a>
                     </div>
                 </div>
-                <!-- Visual Element -->
+                <!-- Visual Element: The Intelligent Pipeline -->
                 <div class="lg:col-span-6 relative">
-                    <div
-                        class="relative rounded-2xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-2xl p-10 premium-blur bg-opacity-90 dark:bg-opacity-80">
-                        <div class="absolute -top-16 -right-16 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-                        <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-                        <div class="flex flex-col space-y-8">
-                            <div
-                                class="flex justify-between items-center border-b border-slate-100 dark:border-slate-700 pb-5">
-                                <div class="flex gap-2.5">
-                                    <div class="w-3.5 h-3.5 rounded-full bg-red-400"></div>
-                                    <div class="w-3.5 h-3.5 rounded-full bg-yellow-400"></div>
-                                    <div class="w-3.5 h-3.5 rounded-full bg-green-400"></div>
+                    <div class="relative rounded-3xl bg-white/80 dark:bg-surface-dark/80 border border-slate-200 dark:border-slate-800 shadow-2xl p-8 premium-blur overflow-hidden">
+                        <!-- Abstract Background Glows -->
+                        <div class="absolute -top-24 -right-24 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+                        <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+                        <div class="relative z-10 flex flex-col space-y-10">
+                            <!-- Input: The Human Message -->
+                            <div class="flex flex-col items-start translate-x-4">
+                                <div class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-6 py-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-200 dark:border-slate-700 max-w-[80%] relative">
+                                    <div class="absolute -left-2 top-0 w-2 h-2 bg-slate-100 dark:bg-slate-800 border-l border-t border-slate-200 dark:border-slate-700 -rotate-45"></div>
+                                    <p class="text-sm font-medium leading-relaxed" data-i18n="hero_vis_input">Hola, ¿tienen disponibilidad mañana?</p>
                                 </div>
-                                <div class="text-xs text-slate-400 font-mono tracking-tighter" data-i18n="status_label">
-                                    system_status: opt_active
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-6">
-                                <div
-                                    class="p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-700">
-                                    <div class="flex items-end space-x-3 h-32 mb-3">
-                                        <div class="w-1/4 bg-slate-200 dark:bg-slate-700 h-1/2 rounded-t-sm"></div>
-                                        <div class="w-1/4 bg-slate-300 dark:bg-slate-600 h-2/3 rounded-t-sm"></div>
-                                        <div class="w-1/4 bg-primary/40 h-3/4 rounded-t-sm"></div>
-                                        <div class="w-1/4 bg-primary h-full rounded-t-sm shadow-glow"></div>
-                                    </div>
-                                    <div
-                                        class="h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                                        <div class="bg-primary h-full w-3/4"></div>
-                                    </div>
-                                </div>
-                                <div class="relative flex items-center justify-center p-6">
-                                    <svg class="w-full h-full text-slate-200 dark:text-slate-700" viewBox="0 0 100 100">
-                                        <circle class="text-primary/10 fill-current" cx="50" cy="50" r="20"></circle>
-                                        <circle class="text-primary fill-current shadow-glow" cx="50" cy="50" r="10">
-                                        </circle>
-                                        <circle cx="20" cy="20" fill="currentColor" r="6"></circle>
-                                        <circle cx="80" cy="80" fill="currentColor" r="6"></circle>
-                                        <circle cx="80" cy="20" fill="currentColor" r="6"></circle>
-                                        <circle cx="20" cy="80" fill="currentColor" r="6"></circle>
-                                        <path d="M25 25 L45 45 M55 55 L75 75 M75 25 L55 45 M45 55 L25 75"
-                                            stroke="currentColor" stroke-width="2.5"></path>
-                                    </svg>
+                                <div class="flex items-center gap-2 mt-3 ml-2 opacity-50">
+                                    <span class="material-icons text-xs">whatsapp</span>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase">WhatsApp Lead</span>
                                 </div>
                             </div>
-                            <div
-                                class="flex items-center gap-5 bg-primary/5 dark:bg-primary/10 p-5 rounded-xl border border-primary/20">
-                                <span class="material-icons text-primary text-3xl">auto_graph</span>
-                                <div>
-                                    <div class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="opt_title">
-                                        Optimización en Tiempo
-                                        Real</div>
-                                    <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="opt_desc">
-                                        Algoritmos predictivos
-                                        ajustando el flujo de conversión.</div>
+
+                            <!-- Processing: The Engine -->
+                            <div class="flex flex-col items-center space-y-4 relative">
+                                <!-- Vertical Line Connectors -->
+                                <div class="absolute top-[-40px] bottom-[-40px] w-0.5 bg-gradient-to-b from-primary/50 via-primary to-primary/50 z-0"></div>
+                                
+                                <div class="relative z-10 py-1.5 px-4 bg-secondary dark:bg-black border border-primary/30 rounded-full flex items-center gap-3 shadow-[0_0_15px_rgba(0,217,255,0.2)]">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></div>
+                                    <span class="text-[10px] font-mono text-primary font-bold tracking-tighter uppercase" data-i18n="hero_vis_step1">[ANALIZANDO_INTENCIÓN]</span>
+                                </div>
+
+                                <div class="relative z-10 py-1.5 px-4 bg-secondary dark:bg-black border border-primary/30 rounded-full flex items-center gap-3 shadow-[0_0_15px_rgba(0,217,255,0.2)]">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary animate-ping" style="animation-delay: 0.5s"></div>
+                                    <span class="text-[10px] font-mono text-primary font-bold tracking-tighter uppercase" data-i18n="hero_vis_step2">[EXTRAYENDO_DATOS]</span>
+                                </div>
+                            </div>
+
+                            <!-- Output: The Business Result -->
+                            <div class="flex flex-col items-end -translate-x-4">
+                                <div class="bg-primary/10 border border-primary/30 p-5 rounded-2xl shadow-glow transition hover:shadow-[0_0_25px_rgba(0,217,255,0.4)]">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-secondary shadow-lg">
+                                            <span class="material-icons">event_available</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="hero_vis_output_title">Cita Agendada</div>
+                                            <div class="text-xs text-primary font-medium" data-i18n="hero_vis_output_desc">Mañana, 4:30 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 mt-3 mr-2 opacity-50">
+                                    <span class="text-[10px] font-bold tracking-widest uppercase">Business Action Executed</span>
+                                    <span class="material-icons text-xs text-green-500">check_circle</span>
                                 </div>
                             </div>
                         </div>
@@ -275,20 +271,20 @@
                                 <span class="material-icons text-primary text-sm">smart_toy</span>
                             </div>
                             <div>
-                                <div class="text-white text-sm font-bold">Balambit AI</div>
-                                <div class="text-green-400 text-xs">En línea</div>
+                                <div class="text-white text-sm font-bold" data-i18n="demo_vis_user">Clínica Dental</div>
+                                <div class="text-green-400 text-xs" data-i18n="demo_vis_status">En línea</div>
                             </div>
                         </div>
                         <div class="flex-1 bg-[#E5DDD5] dark:bg-[#0b141a] p-4 flex flex-col gap-4 overflow-hidden relative">
                             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/subtle-dots.png')] opacity-20"></div>
-                            <div class="bg-white dark:bg-[#202c33] text-slate-800 dark:text-white p-3 rounded-xl rounded-tl-none self-start max-w-[85%] shadow-sm text-sm relative z-10">
-                                Hola, ¿tienen citas disponibles para una limpieza dental mañana?
+                            <div class="bg-white dark:bg-[#202c33] text-slate-800 dark:text-white p-3 rounded-xl rounded-tl-none self-start max-w-[85%] shadow-sm text-sm relative z-10" data-i18n="demo_vis_msg1">
+                                Hola, ¿tienen disponibilidad para una limpieza mañana?
                             </div>
-                            <div class="bg-[#dcf8c6] dark:bg-[#005c4b] text-slate-800 dark:text-white p-3 rounded-xl rounded-tr-none self-end max-w-[85%] shadow-sm text-sm relative z-10">
-                                ¡Hola! Sí, claro. Tenemos un espacio mañana a las 10:00 AM y otro a las 4:30 PM. ¿Cuál te queda mejor?
+                            <div class="bg-[#dcf8c6] dark:bg-[#005c4b] text-slate-800 dark:text-white p-3 rounded-xl rounded-tr-none self-end max-w-[85%] shadow-sm text-sm relative z-10" data-i18n="demo_vis_msg2">
+                                ¡Hola! Sí, tenemos un espacio a las 4:30 PM. ¿Te agendamos?
                             </div>
-                            <div class="bg-white dark:bg-[#202c33] text-slate-800 dark:text-white p-3 rounded-xl rounded-tl-none self-start max-w-[85%] shadow-sm text-sm relative z-10">
-                                A las 4:30 PM perfecto.
+                            <div class="bg-white dark:bg-[#202c33] text-slate-800 dark:text-white p-3 rounded-xl rounded-tl-none self-start max-w-[85%] shadow-sm text-sm relative z-10" data-i18n="demo_vis_msg3">
+                                Sí, perfecto. A esa hora está bien.
                             </div>
                         </div>
                         <div class="bg-slate-100 dark:bg-[#202c33] h-14 w-full flex items-center px-4 text-slate-400">

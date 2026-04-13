@@ -1,4 +1,5 @@
-import { chatSteps } from "./data.js";
+import { chatData } from "./data.js";
+import { demoTranslations } from "./i18n-demo.js";
 
 const screens = {
     chat: document.querySelector('[data-screen="chat"]'),
@@ -17,7 +18,23 @@ const signalBoard = document.getElementById("signal-board");
 const valueTitle = document.getElementById("value-title");
 const valueCopy = document.getElementById("value-copy");
 
+// Language detection
+let currentLang = localStorage.getItem('language') || 'en';
+let chatSteps = chatData[currentLang] || chatData['en'];
+
 let currentStep = 0;
+
+function applyStaticTranslations() {
+    const dict = demoTranslations[currentLang] || demoTranslations['en'];
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const translation = dict[key];
+        if (translation) {
+            el.innerHTML = translation;
+        }
+    });
+}
 
 function setActiveScreen(screenName) {
     Object.values(screens).forEach((screen) => {
@@ -61,9 +78,20 @@ function renderStep(stepIndex) {
     const totalSteps = chatSteps.length;
     const progress = ((stepIndex + 1) / totalSteps) * 100;
 
+    const dict = demoTranslations[currentLang] || demoTranslations['en'];
+
     renderMessages(step.messages);
     renderSignals(step.signals);
-    stepTitle.textContent = `Paso ${stepIndex + 1} de ${totalSteps}`;
+    
+    // Step format: "Step {current} of {total}"
+    if (dict.step_format) {
+        stepTitle.textContent = dict.step_format
+            .replace('{current}', stepIndex + 1)
+            .replace('{total}', totalSteps);
+    } else {
+        stepTitle.textContent = `Step ${stepIndex + 1} of ${totalSteps}`;
+    }
+
     stepMeterFill.style.width = `${progress}%`;
     patientAction.textContent = step.patientAction;
     aiAction.textContent = step.aiAction;
@@ -99,4 +127,5 @@ phoneHotspot.addEventListener("keydown", (event) => {
 restartDemoButton.addEventListener("click", resetDemo);
 
 // Inicializar la demo
+applyStaticTranslations();
 renderStep(currentStep);
