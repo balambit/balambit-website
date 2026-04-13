@@ -1,6 +1,6 @@
 const translations = {
     es: {
-        title: "Balambit - Agencia de IA",
+        title: "Balambit - Plataforma de Automatización Conversacional",
         nav_demo: "Demo",
         nav_results: "Resultados",
         nav_engineering: "Ingeniería",
@@ -65,13 +65,13 @@ const translations = {
         f_ai: "Inteligencia Artificial",
         f_int: "Integraciones",
         f_company: "Empresa",
-        f_about: "Sobre nosotros",
+        f_about: "Nuestra Tecnología",
         f_contact: "Contacto",
         f_email: "info@balambit.com",
         f_copy: "© 2026 Balambit. Todos los derechos reservados."
     },
     en: {
-        title: "Balambit - AI Agency",
+        title: "Balambit - Conversational Automation Platform",
         nav_demo: "Demo",
         nav_results: "Results",
         nav_engineering: "Engineering",
@@ -136,7 +136,7 @@ const translations = {
         f_ai: "Artificial Intelligence",
         f_int: "Integrations",
         f_company: "Company",
-        f_about: "About us",
+        f_about: "Our Technology",
         f_contact: "Contact",
         f_email: "info@balambit.com",
         f_copy: "© 2026 Balambit. All rights reserved."

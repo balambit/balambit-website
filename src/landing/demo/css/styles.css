@@ -867,6 +867,94 @@ button {
   }
 }
 
+/* UX Enhancements */
+.hotspot-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: pointer;
+  pointer-events: none; /* Let clicks pass through to the frame */
+}
+
+.hotspot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(19, 200, 242, 0.25);
+  border: 2px solid rgba(19, 200, 242, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(0.95); box-shadow: 0 0 0 0 rgba(19, 200, 242, 0.4); }
+  70% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 15px rgba(19, 200, 242, 0); }
+  100% { transform: translate(-50%, -50%) scale(0.95); box-shadow: 0 0 0 0 rgba(19, 200, 242, 0); }
+}
+
+.ripple-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 33px;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(19, 200, 242, 0.4);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: ripple-effect 600ms linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-effect {
+  from { width: 0; height: 0; opacity: 0.5; }
+  to { width: 800px; height: 800px; opacity: 0; }
+}
+
+.typing-indicator {
+  padding: 8px 12px;
+  background: var(--wa-incoming);
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  display: inline-flex;
+  gap: 4px;
+  align-self: flex-start;
+  margin-bottom: 6px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  animation: bubbleIn 300ms ease-out;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background: #95a1ac;
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 200ms; }
+.typing-dot:nth-child(3) { animation-delay: 400ms; }
+
+@keyframes typing {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+}
+
+.bounce-hint {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
 @media (max-width: 1180px) {
 
   html,
